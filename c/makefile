@@ -31,7 +31,7 @@ ifneq ($(wildcard main.c),)
 	@echo "main.c already exists. Aborting."
 else
 	@touch main.c
-	@echo "#include <stdio.h>\n\nint main(int argc, char *argv[]) \n{ \n\tprintf(\"Hello World! \\\n\");\n\treturn 0; \n}" >> main.c
+	@echo "#include <stdio.h>\n\nint main(int argc, char *argv[]) { \n\tprintf(\"Hello World! \\\n\");\n\treturn 0; \n}" >> main.c
 endif
 
 # binary log of main.o into main_bin.txt
