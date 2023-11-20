@@ -1,0 +1,10 @@
+a.out
+*.o
+*.bin.txt
+*.su
+.vscode
+.DS_Store
+node_modules
+/**/.next
+*.env
+*-config.json
