@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-g -Wall
+CFLAGS=-g -Wall -Wextra
 OBJS=main.o
 TARGET=a.out
 
