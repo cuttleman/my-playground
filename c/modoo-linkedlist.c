@@ -2,8 +2,7 @@
 #include <stdlib.h>
 
 // implements Linked list
-struct Node
-{
+struct Node {
   int data;
   struct Node *prevNode;
   struct Node *nextNode;
@@ -13,8 +12,7 @@ struct Node *createNode(int data);
 struct Node *insertNode(struct Node *current, int data);
 void destroyNode(struct Node *destroy);
 
-int main()
-{
+int main() {
   struct Node *a = createNode(1);
   struct Node *b = insertNode(a, 2);
   struct Node *c = insertNode(b, 3);
@@ -50,12 +48,10 @@ int main()
   return 0;
 }
 
-struct Node *createNode(int data)
-{
+struct Node *createNode(int data) {
   struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
 
-  if (newNode == NULL)
-  {
+  if (newNode == NULL) {
     printf("Memory allocation failed \n");
     exit(1);
   }
@@ -67,14 +63,12 @@ struct Node *createNode(int data)
   return newNode;
 }
 
-struct Node *insertNode(struct Node *current, int data)
-{
+struct Node *insertNode(struct Node *current, int data) {
   struct Node *after = current->nextNode;
 
   struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
 
-  if (newNode == NULL)
-  {
+  if (newNode == NULL) {
     printf("Memory allocation failed \n");
     exit(1);
   }
@@ -83,8 +77,7 @@ struct Node *insertNode(struct Node *current, int data)
   newNode->prevNode = current;
   newNode->nextNode = after;
 
-  if (after != NULL)
-  {
+  if (after != NULL) {
     current->nextNode->prevNode = newNode;
   }
 
@@ -93,21 +86,17 @@ struct Node *insertNode(struct Node *current, int data)
   return newNode;
 }
 
-void destroyNode(struct Node *destroy)
-{
-  if (destroy == NULL)
-  {
+void destroyNode(struct Node *destroy) {
+  if (destroy == NULL) {
     printf("Not exist node");
     exit(1);
   }
 
-  if (destroy->prevNode != NULL)
-  {
+  if (destroy->prevNode != NULL) {
     destroy->prevNode->nextNode = destroy->nextNode;
   }
 
-  if (destroy->nextNode != NULL)
-  {
+  if (destroy->nextNode != NULL) {
     destroy->nextNode->prevNode = destroy->prevNode;
   }
 

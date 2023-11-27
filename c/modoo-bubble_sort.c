@@ -1,24 +1,19 @@
 #include <stdio.h>
 
-int bubbleSort(int arr[10], int len)
-{
+int bubbleSort(int arr[10], int len) {
   int i, j, k, t;
   int indexes[10];
 
-  for (k = 0; k < len; k++)
-  {
+  for (k = 0; k < len; k++) {
     indexes[k] = k;
   }
 
-  for (i = 0; i < len - 1; i++)
-  {
-    for (j = i + 1; j < len; j++)
-    {
+  for (i = 0; i < len - 1; i++) {
+    for (j = i + 1; j < len; j++) {
       int temp;
       int temp2;
 
-      if (arr[i] > arr[j])
-      {
+      if (arr[i] > arr[j]) {
         temp = arr[j];
         arr[j] = arr[i];
         arr[i] = temp;
@@ -31,13 +26,11 @@ int bubbleSort(int arr[10], int len)
   }
 
   printf("성적순으로 정렬\n");
-  for (t = 0; t < len; t++)
-  {
+  for (t = 0; t < len; t++) {
     printf("%d 번째 학생 점수 : %d, 그래프: ", indexes[t] + 1, arr[t]);
 
     int g;
-    for (g = 0; g < arr[t]; g++)
-    {
+    for (g = 0; g < arr[t]; g++) {
       printf("*");
     }
 
@@ -47,13 +40,11 @@ int bubbleSort(int arr[10], int len)
   return 0;
 }
 
-int main()
-{
+int main() {
   int i, j;
   int scores[10];
 
-  for (i = 0; i < 10; i++)
-  {
+  for (i = 0; i < 10; i++) {
     printf("%d 번째 학생 점수:", i + 1);
     scanf("%d", &scores[i]);
   }

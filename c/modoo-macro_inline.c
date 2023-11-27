@@ -7,8 +7,7 @@
 // 컴파일러가 이러한 사항들을 고려해서 결정하기 때문에 같은 코드를 생성할 수 도 있고 아닐 수 도 있습니다.
 static inline int mul(int x, int y) { return x * y; }
 
-int main()
-{
+int main() {
   printf("sum : %d \n", sum(4, 5));
   printf("mul : %d \n", mul(4, 5));
   return 0;

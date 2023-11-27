@@ -17,7 +17,7 @@ _run:
 	
 # clean by complied
 _clean:
-	@rm -f *.out
+	@rm -rf *.out *.out.*
 
 # make main.c into c dir
 new:
@@ -27,3 +27,7 @@ else
 	@touch main.cpp
 	@echo "#include <iostream>\n\nint main(int argc, char *argv[]) {\n\tstd::cout << \"Hello World!\" << std::endl;\n\treturn 0; \n}" >> main.cpp
 endif
+
+# clean bin by product
+clean:
+	@rm -rf *.su *.o *.bin.txt
